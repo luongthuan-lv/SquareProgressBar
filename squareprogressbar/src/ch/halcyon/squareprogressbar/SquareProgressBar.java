@@ -513,7 +513,7 @@ public class SquareProgressBar extends RelativeLayout {
      * @since 1.6.2
      */
     public void setRoundedCorners(boolean useRoundedCorners){
-        bar.setRoundedCorners(useRoundedCorners, 10);
+        bar.setRoundedCorners(useRoundedCorners, 15);
     }
 
     /**

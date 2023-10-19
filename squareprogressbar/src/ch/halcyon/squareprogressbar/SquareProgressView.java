@@ -115,20 +115,20 @@ public class SquareProgressView extends View {
             DrawStop drawEnd = getDrawEnd((scope / 100) * Float.valueOf(String.valueOf(indeterminate_count)), canvas);
 
             if (drawEnd.place == Place.TOP) {
-                path.moveTo(drawEnd.location - indeterminate_width - strokewidth, hSw);
+                path.moveTo(drawEnd.location - indeterminate_width * 20 - strokewidth, hSw);
                 path.lineTo(drawEnd.location, hSw);
                 canvas.drawPath(path, progressBarPaint);
             }
 
             if (drawEnd.place == Place.RIGHT) {
-                path.moveTo(cW - hSw, drawEnd.location - indeterminate_width);
+                path.moveTo(cW - hSw, drawEnd.location - indeterminate_width * 10);
                 path.lineTo(cW - hSw, strokewidth
                         + drawEnd.location);
                 canvas.drawPath(path, progressBarPaint);
             }
 
             if (drawEnd.place == Place.BOTTOM) {
-                path.moveTo(drawEnd.location - indeterminate_width - strokewidth,
+                path.moveTo(drawEnd.location - indeterminate_width * 20 - strokewidth,
                         cH - hSw);
                 path.lineTo(drawEnd.location, cH
                         - hSw);
@@ -136,7 +136,7 @@ public class SquareProgressView extends View {
             }
 
             if (drawEnd.place == Place.LEFT) {
-                path.moveTo(hSw, drawEnd.location - indeterminate_width
+                path.moveTo(hSw, drawEnd.location - indeterminate_width * 10
                         - strokewidth);
                 path.lineTo(hSw, drawEnd.location);
                 canvas.drawPath(path, progressBarPaint);
